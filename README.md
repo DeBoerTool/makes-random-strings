@@ -5,7 +5,7 @@
 You can install the package via composer:
 
 ```bash
-composer require dbt/makes-random-string
+composer require dbt/makes-random-strings
 ```
 
 ## Usage
