@@ -1,29 +1,13 @@
 <?php
 
-namespace Dbt\PhpProject\Tests;
+namespace Dbt\MakesRandomStrings\Tests;
 
+use Dbt\MakesRandomStrings\MakesRandomStringsTrait;
 use PHPUnit\Framework\TestCase;
 
 class UnitTestCase extends TestCase
 {
-    public static function rs (int $chars): string
-    {
-        $string = '';
-
-        while (($len = strlen($string)) < $chars) {
-            $size = $chars - $len;
-
-            $bytes = random_bytes($size);
-
-            $string .= substr(
-                str_replace(['/', '+', '='], '', base64_encode($bytes)),
-                0,
-                $size
-            );
-        }
-
-        return $string;
-    }
+    use MakesRandomStringsTrait;
 
     public static function ri (int $min, int $max): int
     {
