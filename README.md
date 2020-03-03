@@ -1,16 +1,16 @@
-# PHP Project Template
+# MakesRandomStringsTrait
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require dbt/php-project
+composer require dbt/makes-random-string
 ```
 
 ## Usage
 
-Change the project name and namespaces in `composer.json` and also in `UnitTestCase` and away you go. 
+Use `MakesRandomStringsTrait` in your class and then call `self::rs($int)` to generate a random string of `$int` length. 
 
 ## Etc.
 
