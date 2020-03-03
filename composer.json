@@ -1,0 +1,48 @@
+{
+    "name": "dbt/php-project",
+    "description": "PHP Project Scaffolding",
+    "keywords": [
+        "dbt",
+        "php"
+    ],
+    "homepage": "https://github.com/dbt/php-project",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Daniel S. Deboer",
+            "email": "daniel.s.deboer@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+      "friendsofphp/php-cs-fixer": "^2.15",
+      "ext-pcov": "*",
+      "larapack/dd": "^1.1",
+      "phpunit/phpunit": "^7.0",
+      "vimeo/psalm": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dbt\\PhpProject\\": "Source"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dbt\\PhpProject\\Tests\\": "Tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --no-coverage",
+        "coverage": "phpunit --coverage-html Reports/coverage",
+        "pcov": "php -d pcov.enabled=1 vendor/phpunit/phpunit/phpunit --coverage-html Reports/coverage",
+        "stat": "psalm"
+    },
+    "config": {
+        "sort-packages": true,
+        "vendor-dir": "Vendor"
+    }
+}
