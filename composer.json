@@ -1,5 +1,5 @@
 {
-    "name": "dbt/make-random-strings",
+    "name": "dbt/makes-random-strings",
     "description": "A trait to add random string creation",
     "keywords": [
         "dbt",
